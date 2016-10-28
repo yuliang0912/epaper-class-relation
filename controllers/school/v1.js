@@ -2,10 +2,13 @@
  * Created by yuliang on 2016/10/13.
  */
 
-var schoolInfoService = require('../../proxy/api_transform/school_info')
+var schoolInfoService = require('../../proxy/service/school_info')
 
 module.exports = {
     noAuths: [],
+    getUserSchool: function *() {
+
+    },
     getSchoolInfo: function *() {
         var schoolId = this.checkQuery('schoolId').notEmpty().toInt().value;
         this.errors && this.validateError();

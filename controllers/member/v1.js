@@ -2,8 +2,8 @@
  * Created by yuliang on 2016/10/18.
  */
 
-var classService = require('../../proxy/api_transform/class_info')
-var classMemberService = require('../../proxy/api_transform/class_member')
+var classService = require('../../proxy/service/class_info')
+var classMemberService = require('../../proxy/service/class_member')
 
 module.exports = {
     getClassMembers: function *() {

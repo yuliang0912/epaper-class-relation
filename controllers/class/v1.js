@@ -2,8 +2,8 @@
  * Created by yuliang on 2016/9/30.
  */
 
-var classInfoService = require('../../proxy/api_transform/class_info')
-var schoolInfoService = require('../../proxy/api_transform/school_info')
+var classInfoService = require('../../proxy/service/class_info')
+var schoolInfoService = require('../../proxy/service/school_info')
 
 
 module.exports = {
@@ -46,7 +46,7 @@ module.exports = {
         classIds = classIds.split(',').map(item=>parseInt(item));
 
         yield classInfoService.deleteClass(brandId, classIds)
-            .then(data=>this.success(data[0] > 0 ? 1 : 0)).catch(this.error)
+            .then(data=>this.success(data > 0 ? 1 : 0)).catch(this.error)
     },
     updateClassGrade: function *() {
         var brandId = this.checkQuery('brandId').toInt().value;
