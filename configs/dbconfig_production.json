@@ -1,0 +1,34 @@
+{
+  "epaperWork": {
+    "username": "ciwong_sabin",
+    "password": "dianzibao2015",
+    "database": "cw_epaper_work",
+    "config": {
+      "host": "rdsji4782vw39828axxz.mysql.rds.aliyuncs.com",
+      "port": 3306,
+      "dialect": "mysql",
+      "timezone": "+08:00",
+      "pool": {
+        "maxConnections": 2000,
+        "minConnections": 3,
+        "maxIdleTime": 10000
+      }
+    }
+  },
+  "epaperMsg": {
+    "username": "ciwong_sabin",
+    "password": "dianzibao2015",
+    "database": "cw_epaper_msg",
+    "config": {
+      "host": "rdsji4782vw39828axxz.mysql.rds.aliyuncs.com",
+      "port": 3306,
+      "dialect": "mysql",
+      "timezone": "+08:00",
+      "pool": {
+        "maxConnections": 2000,
+        "minConnections": 3,
+        "maxIdleTime": 10000
+      }
+    }
+  }
+}
