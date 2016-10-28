@@ -2,7 +2,6 @@
  * Created by yuliang on 2016/10/13.
  */
 
-
 var schoolInfoService = require('../../proxy/api_transform/school_info')
 
 module.exports = {

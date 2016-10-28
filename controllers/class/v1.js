@@ -11,6 +11,7 @@ module.exports = {
     getClassInfo: function *() {
         var classId = this.checkQuery('classId').notEmpty().toInt().value;
         this.errors && this.validateError();
+
         yield classInfoService.getClassInfo(classId).then(this.success).catch(this.error)
     },
     createClass: function *() {
@@ -21,7 +22,7 @@ module.exports = {
         var brandId = this.checkBody('brandId').toInt().value;
         this.errors && this.validateError();
 
-        var schoolInfo = (yield schoolInfoService.getSchoolInfo(schoolId)).toApiData();
+        var schoolInfo = yield schoolInfoService.getSchoolInfo(schoolId);
 
         if (!schoolInfo) {
             this.error('未找到指定的学校', 101)
