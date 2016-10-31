@@ -8,6 +8,9 @@ var schoolInfoService = require('../../proxy/service/school_info')
 
 module.exports = {
     noAuths: [],
+    getUserClass: function *() {
+        yield classInfoService.getUserClass(this.request.userId).then(this.success).catch(this.error)
+    },
     getClassInfo: function *() {
         var classId = this.checkQuery('classId').notEmpty().toInt().value;
         this.errors && this.validateError();
