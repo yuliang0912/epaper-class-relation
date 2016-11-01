@@ -49,8 +49,14 @@ module.exports = {
         if (!classInfo) {
             this.error('参数错误,未找到指定的班级')
         }
+        if (classInfo.status !== 0) {
+            this.error('未找到指定的班级')
+        }
         if (classInfo.schoolId != schoolId) {
             this.error('参数错误,classId与schoolId不匹配')
+        }
+        if (classInfo.brandId != brandId) {
+            this.error('参数错误,brandId与classId不匹配')
         }
 
         var memberInfo = yield classMemberService.getMemberInfo(classId, userId)

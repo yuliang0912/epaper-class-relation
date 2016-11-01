@@ -9,7 +9,13 @@ var schoolInfoService = require('../../proxy/service/school_info')
 module.exports = {
     noAuths: [],
     getUserClass: function *() {
-        yield classInfoService.getUserClass(this.request.userId).then(this.success).catch(this.error)
+        var userRole = this.checkQuery('userRole').default(0).toInt().value;
+        var userId = this.checkQuery('userId').default(0).toInt().value;
+        this.errors && this.validateError();
+
+        userId = userId === 0 ? this.request.userId : userId;
+
+        yield classInfoService.getUserClass(userId, userRole).then(this.success).catch(this.error)
     },
     getClassInfo: function *() {
         var classId = this.checkQuery('classId').notEmpty().toInt().value;
@@ -75,6 +81,5 @@ module.exports = {
 
         yield classInfoService.getClassListBySchoolIds(brandId, schoolIds, period, grade, page, pageSize)
             .then(this.success).catch(this.error)
-
     }
 }
