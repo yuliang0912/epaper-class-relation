@@ -7,7 +7,12 @@ var schoolInfoService = require('../../proxy/service/school_info')
 module.exports = {
     noAuths: [],
     getUserSchool: function *() {
-        yield schoolInfoService.getUserSchool(this.request.userId).then(this.success).catch(this.error)
+        var userId = this.checkQuery('userId').default(0).toInt().value;
+        this.errors && this.validateError();
+
+        userId = userId === 0 ? this.request.userId : userId;
+
+        yield schoolInfoService.getUserSchool(userId).then(this.success).catch(this.error)
     },
     getSchoolInfo: function *() {
         var schoolId = this.checkQuery('schoolId').notEmpty().toInt().value;

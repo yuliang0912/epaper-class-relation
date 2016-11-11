@@ -55,7 +55,7 @@ module.exports = {
         classIds = classIds.split(',').map(item=>parseInt(item));
 
         yield classInfoService.deleteClass(brandId, classIds)
-            .then(data=>this.success(data > 0 ? 1 : 0)).catch(this.error)
+            .then(data=>data > 0 ? 1 : 0).then(this.success).catch(this.error)
     },
     updateClassGrade: function *() {
         var brandId = this.checkQuery('brandId').toInt().value;
@@ -66,7 +66,7 @@ module.exports = {
         classIds = classIds.split(',').map(item=>parseInt(item));
 
         yield classInfoService.updateClassGrade(brandId, classIds, gradeId)
-            .then(data=>this.success(data[0] > 0 ? 1 : 0)).catch(this.error)
+            .then(data=>data > 0 ? 1 : 0).then(this.success).catch(this.error)
     },
     getClassListBySchoolIds: function *() {
         var brandId = this.checkQuery('brandId').toInt().value;

@@ -16,7 +16,7 @@ function clientEvents(currClient) {
     });
     currClient.on('end', function () {
         client = null
-        redisConfig.connOptions.host = '192.168.40.150'
+        //10秒自动尝试连接一次
         setTimeout(createClient, 10000)
     });
     currClient.on('ready', function () {

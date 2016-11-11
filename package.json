@@ -7,6 +7,7 @@
     "bluebird": "^3.4.6",
     "co": "3.x.x",
     "ioredis": "^2.4.0",
+    "knex": "^0.12.6",
     "koa": "0.x.x",
     "koa-bodyparser": "1.x.x",
     "koa-favicon": "^1.2.1",

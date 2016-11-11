@@ -41,7 +41,7 @@ module.exports = {
         var isMaster = this.checkBody('isMaster').default(0).toInt().value;
         this.errors && this.validateError();
 
-        if (userId > 0 && userId < 10001) {
+        if (userId != 0 && userId < 10001) {
             this.error('userId不在取值范围之内')
         }
 
@@ -57,6 +57,12 @@ module.exports = {
         }
         if (classInfo.brandId != brandId) {
             this.error('参数错误,brandId与classId不匹配')
+        }
+        if (userRole == 1 && classInfo.studentNum >= 100) {
+            this.error('当前班级中学生人数已经达到最大限制')
+        }
+        if (userRole == 2 && classInfo.teacherNum >= 10) {
+            this.error('当前班级中老师人数已经打到最大限制')
         }
 
         var memberInfo = yield classMemberService.getMemberInfo(classId, userId)

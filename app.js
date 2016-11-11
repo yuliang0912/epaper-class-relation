@@ -46,5 +46,8 @@ process.on('unhandledRejection', function (err, p) {
 });
 
 
+require('./data_import/school_info_import')()
+require('./data_import/class_info_import')()
+require('./data_import/class_member_import')()
 
 
