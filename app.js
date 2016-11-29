@@ -24,7 +24,6 @@ app.on('error', err=> {
     console.log('server error', err);
 });
 
-
 require('./configs/database')().then(dbContents=> {
     app.context.dbContents = dbContents;
     console.log("database initialized");
@@ -45,9 +44,10 @@ process.on('unhandledRejection', function (err, p) {
     console.error("unhandledRejectionLogs:" + err.stack)
 });
 
+var cache = require('./proxy/service/cache')
 
-require('./data_import/school_info_import')()
-require('./data_import/class_info_import')()
-require('./data_import/class_member_import')()
+// require('./data_import/school_info_import')()
+// require('./data_import/class_info_import')()
+// require('./data_import/class_member_import')()
 
 

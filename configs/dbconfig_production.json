@@ -1,10 +1,10 @@
 {
   "classRelation": {
     "username": "root",
-    "password": "root",
+    "password": "ciwong",
     "database": "cw_epaper_class_relation",
     "config": {
-      "host": "192.168.1.64",
+      "host": "192.168.2.107",
       "port": 3306,
       "dialect": "mysql",
       "timezone": "+08:00",

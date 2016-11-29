@@ -27,10 +27,11 @@ module.exports = {
     redisConfig: {
         isOpen: true,
         connOptions: {
-            host: '192.168.40.150',
+            host: '192.168.2.111',
             port: 6379,
             options: {
-                string_numbers: true
+                string_numbers: true,
+                url:"redis://root:ciwong567@"
             }
         },
     },

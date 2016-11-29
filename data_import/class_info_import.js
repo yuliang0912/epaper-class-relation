@@ -15,7 +15,7 @@ module.exports = function () {
 function importClassList() {
     knex.oldRelationKnex('cw_groupclass')
         .innerJoin('cw_class', 'cw_class.CID', 'cw_groupclass.ID')
-        .where('AuthType', 2).where('importTag', 0).orderBy('cw_class.CID').limit(50)
+        .where({AuthType: 2, importTag: 0}).orderBy('cw_class.CID').limit(50)
         .select('cw_class.*', 'cw_groupclass.CreateUserId', 'cw_groupclass.CreateDate', 'cw_class.UpdateDate', 'cw_groupclass.GroupState').map(item=> {
         return {
             classId: item.CID,
