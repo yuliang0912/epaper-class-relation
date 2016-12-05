@@ -19,7 +19,7 @@ var newRelationKnex = require('knex')({
         max: dbConfig.classRelation.config.maxConnections,
     },
     acquireConnectionTimeout: dbConfig.classRelation.config.maxIdleTime,
-    //debug: process.env.NODE_ENV !== 'production'
+    debug: process.env.NODE_ENV !== 'production'
 });
 
 var oldRelationKnex = require('knex')({

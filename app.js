@@ -44,9 +44,9 @@ process.on('unhandledRejection', function (err, p) {
     console.error("unhandledRejectionLogs:" + err.stack)
 });
 
-var cache = require('./proxy/service/cache')
-
-// require('./data_import/school_info_import')()
+//var cache = require('./proxy/service/cache')
+//new cache().get('key1').then(console.log)
+//require('./data_import/school_info_import')()
 // require('./data_import/class_info_import')()
 // require('./data_import/class_member_import')()
 

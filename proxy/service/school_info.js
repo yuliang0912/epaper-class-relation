@@ -15,7 +15,7 @@ module.exports = {
     },
     getSchoolList: function (schoolArea, period, keyWords, page, pageSize) {
         var condition = {
-            schoolArea: {$like: schoolArea + '%'}
+            schoolArea: {$gte: schoolArea.toString(), $lt: (schoolArea + 1).toString()}
         }
         if (period) {
             condition.period = period;

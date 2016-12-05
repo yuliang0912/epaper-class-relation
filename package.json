@@ -5,7 +5,7 @@
   "description": "习网教辅云班级关系API",
   "dependencies": {
     "bluebird": "^3.4.6",
-    "co": "3.x.x",
+    "co": "^4.6.0",
     "ioredis": "^2.4.0",
     "knex": "^0.12.6",
     "koa": "0.x.x",
@@ -14,14 +14,12 @@
     "koa-router": "3.x.x",
     "koa-static": "1.x.x",
     "koa-validate": "^1.0.6",
+    "lodash": "^4.17.2",
     "mysql": "^2.12.0",
-    "node-schedule": "^1.2.0",
     "redis": "^2.6.3",
-    "request": "^2.78.0",
     "sequelize": "^3.25.0",
     "string-format": "^0.5.0",
-    "thunkify": "2.x.x",
-    "underscore": "^1.8.3"
+    "thunkify": "2.x.x"
   },
   "devDependencies": {
     "debug": "1.x.x"

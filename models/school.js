@@ -16,7 +16,7 @@ module.exports = function (relationSequelize) {
                 type: Sequelize.STRING
             },
             schoolArea: {
-                type: Sequelize.INTEGER,
+                type: Sequelize.STRING,
             },
             address: {
                 type: Sequelize.STRING

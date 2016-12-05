@@ -3,7 +3,7 @@
  */
 
 var Sequelize = require('sequelize');
-var sequelizeExpand = require('../lib/sequelize_expand')()
+var sequelizeExpand = require('../libs/sequelize_expand')()
 var dbConfig = process.env.NODE_ENV === 'production'
     ? require('./dbconfig_production.json')
     : require('./dbconfig_development.json');

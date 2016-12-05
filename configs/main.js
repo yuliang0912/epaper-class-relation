@@ -25,13 +25,13 @@ module.exports = {
         cache: DEBUG ? false : 'memory',
     },
     redisConfig: {
-        isOpen: true,
+        isOpen: false,
         connOptions: {
             host: '192.168.2.111',
             port: 6379,
             options: {
                 string_numbers: true,
-                url:"redis://root:ciwong567@"
+                url: "redis://root:ciwong567@"
             }
         },
     },
