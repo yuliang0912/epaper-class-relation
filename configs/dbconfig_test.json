@@ -1,0 +1,51 @@
+{
+  "classRelation": {
+    "username": "ciwong_sabin",
+    "password": "ciwong2017",
+    "database": "cw_epaper_class_relation",
+    "config": {
+      "host": "192.168.2.117",
+      "port": 3306,
+      "dialect": "mysql",
+      "timezone": "+08:00",
+      "pool": {
+        "maxConnections": 4000,
+        "minConnections": 3,
+        "maxIdleTime": 10000
+      },
+      "logging": null
+    }
+  },
+  "oldRelation": {
+    "username": "ciwong_sabin",
+    "password": "ciwong2017",
+    "database": "cw_relations",
+    "config": {
+      "host": "192.168.2.117",
+      "port": 3306,
+      "dialect": "mysql",
+      "timezone": "+08:00",
+      "pool": {
+        "maxConnections": 4000,
+        "minConnections": 3,
+        "maxIdleTime": 10000
+      }
+    }
+  },
+  "userInfo": {
+    "username": "ciwong_sabin",
+    "password": "ciwong2017",
+    "database": "db_userinfo",
+    "config": {
+      "host": "192.168.2.117",
+      "port": 3306,
+      "dialect": "mysql",
+      "timezone": "+08:00",
+      "pool": {
+        "maxConnections": 600,
+        "minConnections": 3,
+        "maxIdleTime": 10000
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "apps": [
+    {
+      "name": "epaper-class-relation-api",
+      "script": "app.js",
+      "node_args": "-harmony",
+      "watch": true,
+      "exec_mode": "cluster",
+      "instances": 2,
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": "8896"
+      },
+      "env_dev": {
+        "NODE_ENV": "development",
+        "PORT": "8896"
+      },
+      "env_test": {
+        "NODE_ENV": "test",
+        "PORT": "8896"
+      }
+    }
+  ]
+}
